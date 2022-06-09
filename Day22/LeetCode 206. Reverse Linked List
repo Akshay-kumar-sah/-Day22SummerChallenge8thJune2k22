@@ -1,0 +1,14 @@
+Question : LeetCode 206. Reverse Linked List
+Solution : 
+class Solution {
+    public ListNode reverseList(ListNode head) {
+          
+      if(null==head||null==head.next) return head;
+        
+        ListNode NewNode=reverseList(head.next);
+        head.next.next=head;
+        head.next=null;
+        return NewNode; 
+        
+    }
+}
